@@ -2,7 +2,7 @@
 
 Simple rtmp streaming server based on [Ant Media Server (github link)](https://github.com/ant-media/Ant-Media-Server) run into docker container.
 
-In compose file there are two services, the rtmp server and a web server with a simple player page.
+In compose file there are two services, the rtmp server and a web server with a simple live player page.
 
 <br/><br/>
 
@@ -33,7 +33,7 @@ ffmpeg \
   rtmp://<docker-publish-hostname-or-ip-address>/LiveApp/<pCode>
 ```
 
-<br/>Now point your browser to this url to open the sample player page (change <span style="color:#08F">\<pCode\></span> with the stream name used with ffmpeg command):
+<br/>Now point your browser to this url to open the sample live player page (change <span style="color:#08F">\<pCode\></span> with the stream name used with ffmpeg command):
 
 ```bash
 http://<docker-publish-hostname-or-ip-address>:8088/index.html?pCode=<pCode>
