@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Test live streaming</title>
+<script type="text/javascript">
+function loadStream() {
+	const urlString = window.location.search;
+	const urlParams = new URLSearchParams(urlString.split('?')[1]);
+	const pCode = urlParams.get('pCode');
+
+	document.getElementById('vFrame').src = "http://localhost:5080/LiveApp/play.html?id=" + pCode + "&autoplay=true&mute=false";
+}
+</script>
+</head>
+<body onLoad="loadStream()">
+<iframe id="vFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>
