@@ -35,6 +35,12 @@ ffmpeg \
 
 <br/>Now point your browser to this url to open the sample player page (change <span style="color:#08F">\<pCode\></span> with the stream name used with ffmpeg command):
 
-```http
+```bash
 http://<docker-publish-hostname-or-ip-address>:8088/index.html?pCode=<pCode>
+```
+
+<br/>The play.html page instead can play a local mp4 file, loaded from site root directory using the value of <span style="color:#08F">\<pNum\></span> to load 'video\<pNum\>.mp4':
+
+```bash
+http://<docker-publish-hostname-or-ip-address>:8088/play.html?pNum=<pNum>
 ```
