@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Test live streaming</title>
+<script type="text/javascript">
+function loadProg() {
+	const urlString = window.location.search;
+	const urlParams = new URLSearchParams(urlString.split('?')[1]);
+	const pNum = urlParams.get('pNum');
+
+	var videosrc  = '<video width="560" height="315" controls>';
+	    videosrc += '<source id="prog" src="video'+ pNum +'.mp4" type="video/mp4">';
+	    videosrc += 'Your browser does not support the video tag.';
+	    videosrc += '</video>';
+
+	document.getElementById('videoframe').innerHTML = videosrc;
+}
+</script>
+</head>
+<body onLoad="loadProg()">
+<div id="videoframe"></div>
+</body>
+</html>
